@@ -1,0 +1,30 @@
+1  lsblk
+    2  fdisk /dev/xvdf
+    3  lsblk
+    4  mkfs.xfs /dev/xvdf1
+    5  lsblk
+    6  mkdir /diskb
+    7  df -Th
+    8  mount /dev/xvdf1/diskb
+    9  mount /dev/xvdf1 /diskb
+   10  df -Th
+   11  cd /diskb
+   12  ls
+   13  touc 1..100
+   14  touch 1..100
+   15  ls
+   16  touch {1..100}
+   17  ls
+   18  df -Th
+   19  cd ..
+   20  umount diskb
+   21  df -Th
+   22  lsblk
+   23  fdisk /dev/xvdf
+   24  lsblk
+   25  mkdir aws
+   26  mkfs .ext3 /dev/xvdf1
+   27* 
+   28  mount /dev/xvdf1 /aws
+   29  mount /dev/xvdf1 aws
+   30  df -h
